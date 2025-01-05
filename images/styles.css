@@ -1,0 +1,260 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0e0e0e;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
+}
+
+/* Section container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Slide transitions */
+.slide {
+    background: linear-gradient(45deg, #0f0f0f, #2f2f2f);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 45px rgba(0, 255, 255, 0.3);
+}
+
+/* Title Slide */
+#slide1 h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #00e5ff;
+    margin-bottom: 20px;
+}
+
+#slide1 p {
+    font-size: 1.5em;
+    color: #b0b0b0;
+}
+
+/* About Me Section */
+#slide2 {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#slide2 p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin: 20px 0;
+}
+
+#slide2 .icons a {
+    color: #00e5ff;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+#slide2 .icons a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Education Section */
+#slide3 {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+#slide3 p {
+    font-size: 1.2em;
+    color: #d3d3d3;
+}
+
+/* Technical Skills Section */
+#slide4 {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skills div {
+    text-align: center;
+}
+
+.skills img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Achievements Section */
+#slide5 {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+ul {
+    list-style-type: none;
+    font-size: 1.2em;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Projects Section */
+#slide6 {
+    background: rgba(10, 10, 10, 0.75);
+}
+
+#slide6 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#slide6 li {
+    background: linear-gradient(135deg, #1f1f1f, #333);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+}
+
+#slide6 li:hover {
+    background: linear-gradient(135deg, #00e5ff, #1f1f1f);
+    color: #fff;
+}
+
+/* Certifications Section */
+#slide7 {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+/* Interests Section */
+#slide8 {
+    background: rgba(10, 10, 10, 0.75);
+}
+
+ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Footer Section */
+#slide10 {
+    background: rgba(30, 30, 30, 0.9);
+}
+
+footer {
+    font-size: 1.2em;
+    color: #b0b0b0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #slide1 h1 {
+        font-size: 2em;
+    }
+
+    #slide1 p {
+        font-size: 1.2em;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #slide2 .icons a {
+        font-size: 1.1em;
+    }
+
+    #slide2 p, #slide3 p, #slide4 p, #slide5 p, #slide6 p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #slide1 h1 {
+        font-size: 1.5em;
+    }
+
+    #slide1 p {
+        font-size: 1em;
+    }
+
+    #slide2 .icons a {
+        font-size: 1em;
+        margin: 5px;
+    }
+
+    #slide2 p, #slide3 p, #slide4 p, #slide5 p, #slide6 p {
+        font-size: 0.9em;
+    }
+
+    .skills img {
+        width: 30px;
+        height: 30px;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+}
