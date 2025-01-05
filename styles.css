@@ -186,6 +186,55 @@ footer p {
     margin: 5px 0;
 }
 
+/* Contact Form Section */
+#contact {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+form input, form textarea {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #00e5ff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 60%;
+}
+
+form button {
+    background-color: #00e5ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #00b8cc;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -225,6 +274,14 @@ footer p {
     .slide {
         margin: 15px 0;
         padding: 30px;
+    }
+
+    form input[type="text"], form input[type="email"], form textarea {
+        width: 80%;
+    }
+
+    form button {
+        width: 80%;
     }
 }
 
@@ -269,5 +326,13 @@ footer p {
 
     footer p {
         font-size: 1em;
+    }
+
+    form input[type="text"], form input[type="email"], form textarea {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
     }
 }
