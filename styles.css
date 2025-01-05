@@ -22,7 +22,7 @@ h1, h2, h3 {
 
 /* Section container */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px;
@@ -221,6 +221,11 @@ footer p {
     #slide2 p, #slide3 p, #slide4 p, #slide5 p, #slide6 p {
         font-size: 1em;
     }
+
+    .slide {
+        margin: 15px 0;
+        padding: 30px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -255,6 +260,14 @@ footer p {
     }
 
     ul li {
+        font-size: 1em;
+    }
+
+    .slide {
+        padding: 20px;
+    }
+
+    footer p {
         font-size: 1em;
     }
 }
