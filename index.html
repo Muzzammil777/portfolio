@@ -1,114 +1,781 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohammed Muzzammil A K - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <!-- Inter Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- AOS for scroll animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+  </head>
+  <body class="bg-[#0e0e0e] text-white font-inter min-h-screen">
+    <!-- Sticky Navbar -->
+    <header
+      class="sticky top-0 z-50 w-full bg-[#121212]/80 backdrop-blur border-b border-[#232b3b]"
+    >
+      <div class="absolute top-4 left-4 flex gap-4 z-50">
+        <!-- Social icons removed as requested -->
+      </div>
+      <div class="flex items-center justify-center max-w-6xl mx-auto px-4 py-2">
+        <div class="flex items-center gap-3">
+          <!-- Name removed as requested -->
+        </div>
+        <ul class="hidden md:flex gap-6 text-sm font-semibold">
+          <li>
+            <a href="#hero" class="hover:text-[#3f83f8] transition">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="hover:text-[#3f83f8] transition">About</a>
+          </li>
+          <li>
+            <a href="#education" class="hover:text-[#3f83f8] transition"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="hover:text-[#3f83f8] transition">Skills</a>
+          </li>
+          <li>
+            <a href="#achievements" class="hover:text-[#3f83f8] transition"
+              >Achievements</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-[#3f83f8] transition"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#certifications" class="hover:text-[#3f83f8] transition"
+              >Certifications</a
+            >
+          </li>
+          <li>
+            <a href="#resume" class="hover:text-[#3f83f8] transition">Resume</a>
+          </li>
+          <li>
+            <a href="#interests" class="hover:text-[#3f83f8] transition"
+              >Interests</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-[#3f83f8] transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <button
+          id="nav-toggle"
+          class="md:hidden text-2xl text-[#3f83f8] focus:outline-none"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative flex flex-col items-center justify-center min-h-[80vh] text-center overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 -z-10 animate-gradient bg-gradient-to-tr from-[#3f83f8]/30 via-[#00ffae]/20 to-[#a259f7]/30 blur-2xl opacity-80"
+      ></div>
+      <div class="mt-16 mb-8 flex flex-col items-center gap-4">
+        <h1
+          class="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#3f83f8] via-[#00ffae] to-[#a259f7] bg-clip-text text-transparent drop-shadow"
+        >
+          Mohammed Muzzammil A K
+        </h1>
+        <p class="text-lg md:text-2xl font-medium text-gray-200/90">
+          Software Developer & Problem Solver
+        </p>
+        <a
+          href="#resume"
+          class="mt-4 inline-block px-7 py-3 rounded-full bg-[#3f83f8] hover:bg-[#00ffae] text-white font-bold shadow-lg transition-all duration-200 text-lg"
+          >View Resume</a
+        >
+        <div class="flex gap-4 mt-4 justify-center">
+          <a
+            href="mailto:mohammedmuzzammil.offic@gmail.com"
+            target="_blank"
+            class="text-2xl text-[#3f83f8] hover:text-[#00ffae] transition drop-shadow-lg"
+            title="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/mohammed-muzzammil-a-k-356a36318"
+            target="_blank"
+            class="text-2xl text-[#3f83f8] hover:text-[#00ffae] transition drop-shadow-lg"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/Muzzammil777"
+            target="_blank"
+            class="text-2xl text-[#3f83f8] hover:text-[#00ffae] transition drop-shadow-lg"
+            title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
     <div class="container">
-        <!-- Title Slide -->
-        <section id="slide1" class="slide">
-            <h1>Mohammed Muzzammil A K</h1>
-            <p>"A Passionate Computer Science Student with a Love for Coding and Problem-Solving."</p>
-        </section>
+      <!-- About Me Section -->
+      <section
+        id="about"
+        class="max-w-5xl mx-auto py-16 px-4 md:px-8 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16"
+        data-aos="fade-up"
+      >
+        <div class="flex justify-center items-center w-full">
+          <img
+            src="images/mz.jpg"
+            alt="Profile"
+            class="w-56 h-56 rounded-2xl shadow-2xl border-4 border-[#3f83f8] object-cover bg-[#181c22]"
+          />
+        </div>
+      </section>
 
-        <!-- About Me Section -->
-        <section id="slide2" class="slide">
-            <h2>About Me</h2>
-            <p>"A dedicated 2nd-year Computer Science student with strong problem-solving skills, lateral thinking, and a knack for building innovative solutions."</p>
-            <div class="icons">
-                <a href="mailto:mohammedmuzzammil.offic@gmail.com" target="_blank">Email</a>
-                <a href="tel:9787080204" target="_blank">Phone</a>
-                <a href="https://www.linkedin.com/in/mohammed-muzzammil-a-k-356a36318" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Muzzammil777" target="_blank">GitHub</a>
+      <!-- Education Section -->
+      <section
+        id="education"
+        class="max-w-4xl mx-auto py-16 px-4 md:px-8"
+        data-aos="fade-up"
+        data-aos-once="false"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">
+          Education
+        </h2>
+        <ol class="relative border-l-4 border-[#3f83f8]/60 ml-4">
+          <li class="mb-12 ml-6">
+            <span
+              class="absolute flex items-center justify-center w-8 h-8 bg-[#3f83f8] rounded-full -left-4 ring-4 ring-[#0e0e0e] text-white"
+              ><i class="fas fa-graduation-cap"></i
+            ></span>
+            <div class="bg-[#181c22] rounded-xl shadow-lg p-6">
+              <h3 class="text-xl font-bold text-[#3f83f8]">
+                B.E. Computer Science and Engineering
+              </h3>
+              <p class="text-gray-200 font-semibold">
+                M.Kumarasamy College Of Engineering
+              </p>
+              <p class="text-gray-400 text-sm mb-2">
+                2023 – Present | Karur, Tamil Nadu
+              </p>
+              <ul class="list-disc list-inside text-gray-400 text-base">
+                <li>CGPA: 7.67/10 (current)</li>
+                <li>
+                  Active in software projects, competitive coding, and core CS
+                  fundamentals
+                </li>
+              </ul>
             </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="slide3" class="slide">
-            <h2>Education</h2>
-            <p>B.E. Computer Science and Engineering, M.Kumarasamy College Of Engineering</p>
-            <p>Currently pursuing 2nd year with focus on innovative programming and problem-solving projects.</p>
-        </section>
-
-        <!-- Technical Skills Section -->
-        <section id="slide4" class="slide">
-            <h2>Technical Skills</h2>
-            <div class="skills">
-                <div><img src="images/java.png" alt="Java Logo"></div>
-                <div><img src="images/python.png" alt="Python Logo"></div>
-                <div><img src="images/c.png" alt="C Logo"></div>
-                <div><img src="images/html.png" alt="HTML Logo"></div>
-                <div><img src="images/css.png" alt="CSS Logo"></div>
+          </li>
+          <li class="mb-12 ml-6">
+            <span
+              class="absolute flex items-center justify-center w-8 h-8 bg-[#00ffae] rounded-full -left-4 ring-4 ring-[#0e0e0e] text-white"
+              ><i class="fas fa-school"></i
+            ></span>
+            <div class="bg-[#181c22] rounded-xl shadow-lg p-6">
+              <h3 class="text-xl font-bold text-[#00ffae]">
+                Higher Secondary Education (HSE) - 12th
+              </h3>
+              <p class="text-gray-200 font-semibold">
+                Karur Saraswathi Vidhyalaya Higher Secondary School
+              </p>
+              <p class="text-gray-400 text-sm mb-2">2023 | Karur, Tamil Nadu</p>
+              <ul class="list-disc list-inside text-gray-400 text-base">
+                <li>Percentage: 93.67%</li>
+              </ul>
             </div>
-        </section>
+          </li>
+        </ol>
+      </section>
 
-        <!-- Achievements Section -->
-        <section id="slide5" class="slide">
-            <h2>Achievements</h2>
-            <ul>
-                <li>1st Prize in "Code and Debug" contest at JJ College of Engineering and Technology</li>
-                <li>Completed multiple academic and personal projects showcasing innovative thinking and technical expertise</li>
+      <!-- Technical Skills Section -->
+      <section
+        id="skills"
+        class="max-w-5xl mx-auto py-16 px-4 md:px-8"
+        data-aos="fade-up"
+        data-aos-once="false"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">
+          Technical Skills
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3
+              class="text-lg font-bold text-[#3f83f8] mb-3 flex items-center gap-2"
+            >
+              <i class="fas fa-code"></i> Languages
+            </h3>
+            <ul class="flex flex-wrap gap-3">
+              <li
+                class="bg-[#232b3b] px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2 hover:shadow-lg hover:ring-2 hover:ring-[#3f83f8] transition"
+              >
+                <i class="fab fa-java text-[#f89820]"></i> Java
+              </li>
+              <li
+                class="bg-[#232b3b] px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2 hover:shadow-lg hover:ring-2 hover:ring-[#3f83f8] transition"
+              >
+                <i class="fab fa-python text-[#3776ab]"></i> Python
+              </li>
+              <li
+                class="bg-[#232b3b] px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2 hover:shadow-lg hover:ring-2 hover:ring-[#3f83f8] transition"
+              >
+                <i class="fas fa-c text-[#5a9fd4]"></i> C
+              </li>
             </ul>
-        </section>
+          </div>
+          <div>
+            <h3
+              class="text-lg font-bold text-[#3f83f8] mb-3 flex items-center gap-2"
+            >
+              <i class="fas fa-globe"></i> Web
+            </h3>
+            <ul class="flex flex-wrap gap-3">
+              <li
+                class="bg-[#232b3b] px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2 hover:shadow-lg hover:ring-2 hover:ring-[#3f83f8] transition"
+              >
+                <i class="fab fa-html5 text-[#e34c26]"></i> HTML
+              </li>
+              <li
+                class="bg-[#232b3b] px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2 hover:shadow-lg hover:ring-2 hover:ring-[#3f83f8] transition"
+              >
+                <i class="fab fa-css3-alt text-[#1572b6]"></i> CSS
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="text-lg font-bold text-[#3f83f8] mb-3 flex items-center gap-2"
+            >
+              <i class="fas fa-tools"></i> Tools
+            </h3>
+            <ul class="flex flex-wrap gap-3">
+              <li
+                class="bg-[#232b3b] px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2 hover:shadow-lg hover:ring-2 hover:ring-[#3f83f8] transition"
+              >
+                <i class="fab fa-git-alt text-[#f34f29]"></i> Git
+              </li>
+              <li
+                class="bg-[#232b3b] px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2 hover:shadow-lg hover:ring-2 hover:ring-[#3f83f8] transition"
+              >
+                <i class="fab fa-github text-[#fff]"></i> GitHub
+              </li>
+              <li
+                class="bg-[#232b3b] px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2 hover:shadow-lg hover:ring-2 hover:ring-[#3f83f8] transition"
+              >
+                <i class="fas fa-code text-[#3f83f8]"></i> VS Code
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <!-- Projects Section -->
-        <section id="slide6" class="slide">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/Muzzammil777/ROUTE_PLANNING_SYSTEM/tree/main" target="_blank">Route Planning System</a> - Java-based bus route planning system</li>
-                <li><a href="https://github.com/Muzzammil777/COLLEGE_ADMISSION_SYSTEM/tree/main" target="_blank">College Admission System</a> - Automated college admission process</li>
-                <li><a href="https://github.com/Muzzammil777/TIC_TAC_TOE_GAME" target="_blank">Tic Tac Toe Game</a> - Java-based GUI Tic Tac Toe game</li>
-            </ul>
-        </section>
+      <!-- Achievements Section -->
+      <section
+        id="achievements"
+        class="max-w-4xl mx-auto py-16 px-4 md:px-8"
+        data-aos="fade-up"
+        data-aos-once="false"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">
+          Achievements
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-[#181c22] rounded-xl shadow-lg p-6 flex items-start gap-4 border-l-4 border-[#3f83f8]"
+          >
+            <span class="text-3xl text-[#ffd700]"
+              ><i class="fas fa-trophy"></i
+            ></span>
+            <div>
+              <h3 class="text-lg font-bold text-white">
+                1st Prize – Code and Debug
+              </h3>
+              <p class="text-gray-400 text-sm">
+                JJ College of Engineering and Technology, Feb 2024
+              </p>
+              <p class="text-gray-300 mt-1">
+                Won first place in a national-level coding contest.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[#181c22] rounded-xl shadow-lg p-6 flex items-start gap-4 border-l-4 border-[#3f83f8]"
+          >
+            <span class="text-3xl text-[#00ffae]"
+              ><i class="fas fa-medal"></i
+            ></span>
+            <div>
+              <h3 class="text-lg font-bold text-white">Project Portfolio</h3>
+              <p class="text-gray-400 text-sm">2023 – Present</p>
+              <p class="text-gray-300 mt-1">
+                Completed 5+ academic and personal projects using Java, Python,
+                and web technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Certifications Section -->
-        <section id="slide7" class="slide">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Great Learning - Java Course</li>
-                <li>Coursera - Overview of Data Visualization</li>
-                <li>Coursera - Search Engine Optimization</li>
-            </ul>
-        </section>
+      <!-- Projects Section -->
+      <section
+        id="projects"
+        class="max-w-6xl mx-auto py-16 px-4 md:px-8"
+        data-aos="fade-up"
+        data-aos-once="false"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">
+          Projects
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-[#181c22] rounded-xl shadow-lg p-6 flex flex-col gap-3 border border-[#232b3b] hover:ring-2 hover:ring-[#3f83f8] transition"
+          >
+            <img
+              src="images/project1.webp"
+              alt="Automated Petition Handler"
+              class="rounded-lg mb-2 object-cover h-32 w-full bg-[#232b3b]"
+            />
+            <h3 class="text-lg font-bold text-[#3f83f8]">
+              Automated Petition Handler
+            </h3>
+            <p class="text-gray-300 text-sm">
+              NLP + Python-based system to auto-route petitions based on content
+              analysis.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs mt-1">
+              <span class="bg-[#232b3b] px-2 py-1 rounded text-[#00ffae]"
+                >Python</span
+              >
+              <span class="bg-[#232b3b] px-2 py-1 rounded text-[#a259f7]"
+                >NLP</span
+              >
+            </div>
+            <div class="flex gap-3 mt-2">
+              <a
+                href="https://github.com/Muzzammil777/AUTOMATED_PETITION_HANDLER"
+                target="_blank"
+                class="text-[#3f83f8] hover:underline"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-[#181c22] rounded-xl shadow-lg p-6 flex flex-col gap-3 border border-[#232b3b] hover:ring-2 hover:ring-[#3f83f8] transition"
+          >
+            <img
+              src="images/project2.jpg"
+              alt="Route Planning System"
+              class="rounded-lg mb-2 object-cover h-32 w-full bg-[#232b3b]"
+            />
+            <h3 class="text-lg font-bold text-[#3f83f8]">
+              Route Planning System
+            </h3>
+            <p class="text-gray-300 text-sm">
+              C-based route planning system for efficient public transport &
+              navigation using Dijkstra's algorithm.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs mt-1">
+              <span class="bg-[#232b3b] px-2 py-1 rounded text-[#5a9fd4]"
+                >C</span
+              >
+            </div>
+            <div class="flex gap-3 mt-2">
+              <a
+                href="https://github.com/Muzzammil777/ROUTE_PLANNING_SYSTEM/tree/main"
+                target="_blank"
+                class="text-[#3f83f8] hover:underline"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-[#181c22] rounded-xl shadow-lg p-6 flex flex-col gap-3 border border-[#232b3b] hover:ring-2 hover:ring-[#3f83f8] transition"
+          >
+            <img
+              src="images/project3.jpeg"
+              alt="College Admission System"
+              class="rounded-lg mb-2 object-cover h-32 w-full bg-[#232b3b]"
+            />
+            <h3 class="text-lg font-bold text-[#3f83f8]">
+              College Admission System
+            </h3>
+            <p class="text-gray-300 text-sm">
+              Automated college admission process streamlining student
+              applications.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs mt-1">
+              <span class="bg-[#232b3b] px-2 py-1 rounded text-[#00ffae]"
+                >Python</span
+              >
+            </div>
+            <div class="flex gap-3 mt-2">
+              <a
+                href="https://github.com/Muzzammil777/COLLEGE_ADMISSION_SYSTEM/tree/main"
+                target="_blank"
+                class="text-[#3f83f8] hover:underline"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-[#181c22] rounded-xl shadow-lg p-6 flex flex-col gap-3 border border-[#232b3b] hover:ring-2 hover:ring-[#3f83f8] transition"
+          >
+            <img
+              src="images/project4.png"
+              alt="Tic Tac Toe Game"
+              class="rounded-lg mb-2 object-cover h-32 w-full bg-[#232b3b]"
+            />
+            <h3 class="text-lg font-bold text-[#3f83f8]">Tic Tac Toe Game</h3>
+            <p class="text-gray-300 text-sm">
+              Java-based GUI Tic Tac Toe game with interactive play.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs mt-1">
+              <span class="bg-[#232b3b] px-2 py-1 rounded text-[#f89820]"
+                >Java</span
+              >
+            </div>
+            <div class="flex gap-3 mt-2">
+              <a
+                href="https://github.com/Muzzammil777/TIC_TAC_TOE_GAME"
+                target="_blank"
+                class="text-[#3f83f8] hover:underline"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="https://muzzammil777.github.io/TIC_TAC_TOE_GAME/"
+                target="_blank"
+                class="text-[#00ffae] hover:underline flex items-center gap-1 font-semibold"
+                ><i class="fas fa-play"></i> Play</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Interests Section -->
-        <section id="slide8" class="slide">
-            <h2>Interests</h2>
-            <ul>
-                <li>Coding and developing innovative solutions</li>
-                <li>Learning Blender for 3D modeling</li>
-                <li>Preparing for GATE 2025 with a focus on Computer Science</li>
-            </ul>
-        </section>
+      <!-- Certifications Section -->
+      <section
+        id="certifications"
+        class="max-w-4xl mx-auto py-16 px-4 md:px-8"
+        data-aos="fade-up"
+        data-aos-once="false"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">
+          Certifications
+        </h2>
+        <div class="flex flex-wrap gap-6">
+          <div
+            class="flex items-center gap-3 bg-[#232b3b] rounded-lg px-5 py-3 shadow border border-[#3f83f8]/30"
+          >
+            <i class="fas fa-certificate text-[#3f83f8] text-2xl"></i>
+            <div>
+              <div class="font-bold text-white">
+                Java Programming Fundamentals
+              </div>
+              <div class="text-gray-400 text-sm">Great Learning, 2024</div>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-3 bg-[#232b3b] rounded-lg px-5 py-3 shadow border border-[#3f83f8]/30"
+          >
+            <i class="fas fa-certificate text-[#00ffae] text-2xl"></i>
+            <div>
+              <div class="font-bold text-white">
+                Introduction to Data Visualization
+              </div>
+              <div class="text-gray-400 text-sm">
+                Coursera, University of Illinois, 2024
+                <a
+                  href="images/COURSERA_CERTIFICATE_1.pdf"
+                  target="_blank"
+                  class="ml-2 text-[#3f83f8] hover:underline"
+                  >View Certificate (PDF)</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-3 bg-[#232b3b] rounded-lg px-5 py-3 shadow border border-[#3f83f8]/30"
+          >
+            <i class="fas fa-certificate text-[#a259f7] text-2xl"></i>
+            <div>
+              <div class="font-bold text-white">SEO Fundamentals</div>
+              <div class="text-gray-400 text-sm">
+                Coursera, UC Davis, 2024
+                <a
+                  href="images/COURSERA_CERTIFICATE_2.pdf"
+                  target="_blank"
+                  class="ml-2 text-[#3f83f8] hover:underline"
+                  >View Certificate (PDF)</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-3 bg-[#232b3b] rounded-lg px-5 py-3 shadow border border-[#3f83f8]/30"
+          >
+            <i class="fas fa-certificate text-[#00bfff] text-2xl"></i>
+            <div>
+              <div class="font-bold text-white">
+                Python for Data Science, AI &amp; Development
+              </div>
+              <div class="text-gray-400 text-sm">
+                IBM (Coursera), 2024 &ndash; Online non-credit course
+                <a
+                  href="images/Coursera HXXCSMM6LOM0.pdf"
+                  target="_blank"
+                  class="ml-2 text-[#3f83f8] hover:underline"
+                  >View Certificate (PDF)</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interests Section -->
+      <section
+        id="interests"
+        class="max-w-4xl mx-auto py-16 px-4 md:px-8"
+        data-aos="fade-up"
+        data-aos-once="false"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">
+          Interests
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+          <div
+            class="flex flex-col items-center gap-2 bg-[#232b3b] rounded-xl p-6 shadow hover:scale-105 hover:ring-2 hover:ring-[#3f83f8] transition cursor-pointer"
+          >
+            <span class="text-3xl text-[#3f83f8]"
+              ><i class="fas fa-brain"></i
+            ></span>
+            <span class="text-white font-semibold">Generative AI</span>
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 bg-[#232b3b] rounded-xl p-6 shadow hover:scale-105 hover:ring-2 hover:ring-[#00ffae] transition cursor-pointer"
+          >
+            <span class="text-3xl text-[#00ffae]"
+              ><i class="fas fa-robot"></i
+            ></span>
+            <span class="text-white font-semibold">Machine Learning</span>
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 bg-[#232b3b] rounded-xl p-6 shadow hover:scale-105 hover:ring-2 hover:ring-[#a259f7] transition cursor-pointer"
+          >
+            <span class="text-3xl text-[#a259f7]"
+              ><i class="fas fa-music"></i
+            ></span>
+            <span class="text-white font-semibold">Music</span>
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 bg-[#232b3b] rounded-xl p-6 shadow hover:scale-105 hover:ring-2 hover:ring-[#3f83f8] transition cursor-pointer"
+          >
+            <span class="text-3xl text-[#3f83f8]"
+              ><i class="fas fa-camera-retro"></i
+            ></span>
+            <span class="text-white font-semibold">Photography</span>
+          </div>
+        </div>
+      </section>
 
       <!-- Contact Me Section -->
-<section id="contact" class="slide">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mvggvqwr" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+      <section
+        id="contact"
+        class="max-w-3xl mx-auto py-16 px-4 md:px-8"
+        data-aos="fade-up"
+        data-aos-once="false"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">
+          Contact Me
+        </h2>
+        <div
+          class="bg-[#181c22] rounded-xl shadow-lg p-8 border border-[#3f83f8]/40"
+        >
+          <form
+            action="https://formspree.io/f/mvggvqwr"
+            method="POST"
+            class="flex flex-col gap-6"
+          >
+            <div>
+              <label for="name" class="block text-gray-300 font-semibold mb-2"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your name"
+                class="w-full px-4 py-3 rounded-lg bg-[#232b3b] text-white border border-[#3f83f8]/30 focus:ring-2 focus:ring-[#3f83f8] focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-gray-300 font-semibold mb-2"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+                class="w-full px-4 py-3 rounded-lg bg-[#232b3b] text-white border border-[#3f83f8]/30 focus:ring-2 focus:ring-[#3f83f8] focus:outline-none"
+              />
+            </div>
+            <div>
+              <label
+                for="message"
+                class="block text-gray-300 font-semibold mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Write your message here..."
+                rows="5"
+                class="w-full px-4 py-3 rounded-lg bg-[#232b3b] text-white border border-[#3f83f8]/30 focus:ring-2 focus:ring-[#3f83f8] focus:outline-none"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="mt-2 px-8 py-3 rounded-full bg-[#3f83f8] hover:bg-[#00ffae] text-white font-bold shadow-lg transition-all duration-200 text-lg flex items-center gap-2"
+            >
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </section>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+      <!-- Resume Section -->
+      <section
+        id="resume"
+        class="max-w-3xl mx-auto py-16 px-4 md:px-8"
+        data-aos="fade-up"
+        data-aos-once="false"
+        data-aos-duration="1000"
+      >
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">
+          Resume
+        </h2>
+        <div
+          class="bg-[#181c22] rounded-xl shadow-lg p-8 flex flex-col items-center gap-6 border border-[#3f83f8]/40"
+        >
+          <a
+            href="images\resume.1.pdf"
+            target="_blank"
+            class="px-8 py-3 rounded-full bg-[#3f83f8] hover:bg-[#00ffae] text-white font-bold shadow-lg transition-all duration-200 text-lg flex items-center gap-2"
+            ><i class="fas fa-file-arrow-down"></i> Download Resume (PDF)</a
+          >
+          <!--
+          <iframe src="images/resume.pdf" class="w-full h-96 rounded-lg border mt-4" title="Resume Preview"></iframe>
+          -->
+        </div>
+      </section>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea><br>
-
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-
-        <!-- Footer Section -->
-        <section id="slide10" class="slide">
-            <footer>
-                <p>Thank You for visiting my portfolio!</p>
-                <p>Feel free to connect with me via LinkedIn or GitHub for collaborations or opportunities.</p>
-            </footer>
-        </section>
+      <!-- Footer Section -->
+      <footer
+        class="w-full bg-[#121212] text-gray-400 text-center py-6 mt-12 border-t border-[#232b3b] relative"
+      >
+        <div
+          class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-4"
+        >
+          <span>&copy; 2025 Mohammed Muzzammil A K. All rights reserved.</span>
+          <a
+            href="#hero"
+            class="fixed bottom-6 right-6 z-50 bg-[#3f83f8] hover:bg-[#00ffae] text-white rounded-full p-3 shadow-lg transition-all duration-200 animate-bounce"
+            title="Back to top"
+          >
+            <i class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+      </footer>
     </div>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // AOS init
+      AOS.init({ once: true });
+      // Fade-in for title
+      window.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("#slide1").classList.add("fade-in-active");
+      });
+      // Light/Dark mode toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        themeToggle.classList.toggle("active");
+        themeToggle.innerHTML = document.body.classList.contains("dark-mode")
+          ? '<i class="fas fa-sun"></i>'
+          : '<i class="fas fa-moon"></i>';
+      });
+      // Animate .slide sections on scroll
+      function animateOnScroll() {
+        const slides = document.querySelectorAll(".slide");
+        const trigger = window.innerHeight * 0.92;
+        slides.forEach((slide) => {
+          const rect = slide.getBoundingClientRect();
+          if (rect.top < trigger) {
+            slide.classList.add("animated");
+          }
+        });
+      }
+      window.addEventListener("scroll", animateOnScroll);
+      window.addEventListener("DOMContentLoaded", animateOnScroll);
+      // Hamburger menu toggle
+      const navToggle = document.getElementById("nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+      // Close menu on link click (mobile)
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+        });
+      });
+      // Smooth scroll and active link
+      const sections = document.querySelectorAll("section[id]");
+      window.addEventListener("scroll", () => {
+        let scrollPos = window.scrollY + 120;
+        sections.forEach((section) => {
+          if (
+            scrollPos >= section.offsetTop &&
+            scrollPos < section.offsetTop + section.offsetHeight
+          ) {
+            document
+              .querySelectorAll(".nav-links a")
+              .forEach((a) => a.classList.remove("active"));
+            const activeLink = document.querySelector(
+              '.nav-links a[href="#' + section.id + '"]'
+            );
+            if (activeLink) activeLink.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
