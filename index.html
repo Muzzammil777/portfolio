@@ -32,7 +32,7 @@
         <div class="flex items-center gap-3">
           <!-- Name removed as requested -->
         </div>
-        <ul class="hidden md:flex gap-6 text-sm font-semibold">
+        <ul class="hidden md:flex gap-6 text-sm font-semibold nav-links">
           <li>
             <a href="#hero" class="hover:text-[#3f83f8] transition">Home</a>
           </li>
@@ -739,15 +739,22 @@
       window.addEventListener("DOMContentLoaded", animateOnScroll);
       // Hamburger menu toggle
       const navToggle = document.getElementById("nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
+      const navLinks = document.querySelectorAll(".nav-links")[1];
+      const navClose = document.createElement("button");
       navToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
+        navLinks.style.transform = "translateX(0)";
       });
-      // Close menu on link click (mobile)
-      document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("open");
-        });
+      document.addEventListener("click", function (e) {
+        if (
+          navLinks.style.transform === "translateX(0)" &&
+          !navLinks.contains(e.target) &&
+          e.target !== navToggle
+        ) {
+          navLinks.style.transform = "translateX(-100%)";
+        }
+      });
+      document.getElementById("nav-close").addEventListener("click", () => {
+        navLinks.style.transform = "translateX(-100%)";
       });
       // Smooth scroll and active link
       const sections = document.querySelectorAll("section[id]");
