@@ -32,49 +32,34 @@
         <div class="flex items-center gap-3">
           <!-- Name removed as requested -->
         </div>
+        <!-- Desktop Navbar -->
         <ul class="hidden md:flex gap-6 text-sm font-semibold nav-links">
-          <li>
-            <a href="#hero" class="hover:text-[#3f83f8] transition">Home</a>
+          <li><a href="#hero" class="hover:text-[#3f83f8] transition">Home</a></li>
+          <li><a href="#about" class="hover:text-[#3f83f8] transition">About</a></li>
+          <li><a href="#education" class="hover:text-[#3f83f8] transition">Education</a></li>
+          <li><a href="#skills" class="hover:text-[#3f83f8] transition">Skills</a></li>
+          <li><a href="#achievements" class="hover:text-[#3f83f8] transition">Achievements</a></li>
+          <li><a href="#projects" class="hover:text-[#3f83f8] transition">Projects</a></li>
+          <li><a href="#certifications" class="hover:text-[#3f83f8] transition">Certifications</a></li>
+          <li><a href="#resume" class="hover:text-[#3f83f8] transition">Resume</a></li>
+          <li><a href="#interests" class="hover:text-[#3f83f8] transition">Interests</a></li>
+          <li><a href="#contact" class="hover:text-[#3f83f8] transition">Contact</a></li>
+        </ul>
+        <!-- Mobile Navbar -->
+        <ul id="mobile-nav" class="nav-links flex-col gap-6 text-sm font-semibold fixed top-0 left-0 w-2/3 h-full bg-[#181c22] z-50 p-8 transform -translate-x-full transition-transform duration-300 md:hidden">
+          <li class="mb-6 flex justify-end">
+            <button id="nav-close" class="text-2xl text-[#3f83f8] focus:outline-none"><i class="fas fa-times"></i></button>
           </li>
-          <li>
-            <a href="#about" class="hover:text-[#3f83f8] transition">About</a>
-          </li>
-          <li>
-            <a href="#education" class="hover:text-[#3f83f8] transition"
-              >Education</a
-            >
-          </li>
-          <li>
-            <a href="#skills" class="hover:text-[#3f83f8] transition">Skills</a>
-          </li>
-          <li>
-            <a href="#achievements" class="hover:text-[#3f83f8] transition"
-              >Achievements</a
-            >
-          </li>
-          <li>
-            <a href="#projects" class="hover:text-[#3f83f8] transition"
-              >Projects</a
-            >
-          </li>
-          <li>
-            <a href="#certifications" class="hover:text-[#3f83f8] transition"
-              >Certifications</a
-            >
-          </li>
-          <li>
-            <a href="#resume" class="hover:text-[#3f83f8] transition">Resume</a>
-          </li>
-          <li>
-            <a href="#interests" class="hover:text-[#3f83f8] transition"
-              >Interests</a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-[#3f83f8] transition"
-              >Contact</a
-            >
-          </li>
+          <li><a href="#hero" class="hover:text-[#3f83f8] transition">Home</a></li>
+          <li><a href="#about" class="hover:text-[#3f83f8] transition">About</a></li>
+          <li><a href="#education" class="hover:text-[#3f83f8] transition">Education</a></li>
+          <li><a href="#skills" class="hover:text-[#3f83f8] transition">Skills</a></li>
+          <li><a href="#achievements" class="hover:text-[#3f83f8] transition">Achievements</a></li>
+          <li><a href="#projects" class="hover:text-[#3f83f8] transition">Projects</a></li>
+          <li><a href="#certifications" class="hover:text-[#3f83f8] transition">Certifications</a></li>
+          <li><a href="#resume" class="hover:text-[#3f83f8] transition">Resume</a></li>
+          <li><a href="#interests" class="hover:text-[#3f83f8] transition">Interests</a></li>
+          <li><a href="#contact" class="hover:text-[#3f83f8] transition">Contact</a></li>
         </ul>
         <button
           id="nav-toggle"
@@ -739,22 +724,27 @@
       window.addEventListener("DOMContentLoaded", animateOnScroll);
       // Hamburger menu toggle
       const navToggle = document.getElementById("nav-toggle");
-      const navLinks = document.querySelectorAll(".nav-links")[1];
-      const navClose = document.createElement("button");
+      const mobileNav = document.getElementById("mobile-nav");
+      const navClose = document.getElementById("nav-close");
       navToggle.addEventListener("click", () => {
-        navLinks.style.transform = "translateX(0)";
+        mobileNav.style.transform = "translateX(0)";
+      });
+      navClose.addEventListener("click", () => {
+        mobileNav.style.transform = "translateX(-100%)";
+      });
+      document.querySelectorAll("#mobile-nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileNav.style.transform = "translateX(-100%)";
+        });
       });
       document.addEventListener("click", function (e) {
         if (
-          navLinks.style.transform === "translateX(0)" &&
-          !navLinks.contains(e.target) &&
+          mobileNav.style.transform === "translateX(0)" &&
+          !mobileNav.contains(e.target) &&
           e.target !== navToggle
         ) {
-          navLinks.style.transform = "translateX(-100%)";
+          mobileNav.style.transform = "translateX(-100%)";
         }
-      });
-      document.getElementById("nav-close").addEventListener("click", () => {
-        navLinks.style.transform = "translateX(-100%)";
       });
       // Smooth scroll and active link
       const sections = document.querySelectorAll("section[id]");
