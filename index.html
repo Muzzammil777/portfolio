@@ -46,7 +46,7 @@
           <li><a href="#contact" class="hover:text-[#3f83f8] transition">Contact</a></li>
         </ul>
         <!-- Mobile Navbar -->
-        <ul id="mobile-nav" class="nav-links flex-col gap-6 text-sm font-semibold fixed top-0 left-0 w-2/3 h-full bg-[#181c22] z-50 p-8 transform -translate-x-full transition-transform duration-300 md:hidden">
+        <ul id="mobile-nav" class="nav-links flex flex-col gap-6 text-sm font-semibold fixed top-0 left-0 w-2/3 h-full bg-[#181c22] z-50 p-8 transform -translate-x-full transition-transform duration-300 md:hidden">
           <li class="mb-6 flex justify-end">
             <button id="nav-close" class="text-2xl text-[#3f83f8] focus:outline-none"><i class="fas fa-times"></i></button>
           </li>
@@ -726,24 +726,29 @@
       const navToggle = document.getElementById("nav-toggle");
       const mobileNav = document.getElementById("mobile-nav");
       const navClose = document.getElementById("nav-close");
-      navToggle.addEventListener("click", () => {
-        mobileNav.style.transform = "translateX(0)";
+      navToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileNav.classList.remove("-translate-x-full");
+        mobileNav.classList.add("translate-x-0");
       });
       navClose.addEventListener("click", () => {
-        mobileNav.style.transform = "translateX(-100%)";
+        mobileNav.classList.remove("translate-x-0");
+        mobileNav.classList.add("-translate-x-full");
       });
       document.querySelectorAll("#mobile-nav a").forEach((link) => {
         link.addEventListener("click", () => {
-          mobileNav.style.transform = "translateX(-100%)";
+          mobileNav.classList.remove("translate-x-0");
+          mobileNav.classList.add("-translate-x-full");
         });
       });
       document.addEventListener("click", function (e) {
         if (
-          mobileNav.style.transform === "translateX(0)" &&
+          mobileNav.classList.contains("translate-x-0") &&
           !mobileNav.contains(e.target) &&
           e.target !== navToggle
         ) {
-          mobileNav.style.transform = "translateX(-100%)";
+          mobileNav.classList.remove("translate-x-0");
+          mobileNav.classList.add("-translate-x-full");
         }
       });
       // Smooth scroll and active link
